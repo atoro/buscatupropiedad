@@ -1,0 +1,4 @@
+[06-Oct-2014 10:36:06 America/Santiago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/sibarion/public_html/admin/destacados.php on line 71
+[06-Oct-2014 10:36:06 America/Santiago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/sibarion/public_html/admin/destacados.php on line 71
+[06-Oct-2014 11:15:05 America/Santiago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/sibarion/public_html/admin/destacados.php on line 71
+[06-Oct-2014 11:15:06 America/Santiago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/sibarion/public_html/admin/destacados.php on line 71

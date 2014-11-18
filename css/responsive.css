@@ -1,0 +1,223 @@
+@media only screen and (min-width: 768px) {  
+	
+	body {
+		border: solid 15px white;
+	}
+	header .logo {
+    	width: 300px;
+    	padding-top: 10px;
+	}
+	.contenido_principal h4 {
+		width: 90%;
+	}
+	.contenido_principal .detalle .contenido_propiedad { 
+		display: inline-block;
+		vertical-align: top;
+		width: 30%;
+	}
+	.contenido_principal .detalle .galeria .img_chica {
+		width: 19%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.contenido_principal .detalle .galeria {
+		display: inline-block;
+		width: 63%;
+		margin: 0 2% 0 20px;
+	}
+	.contenido_principal .filtro {
+		width: 28%;
+		margin: 0 2% 0 20px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.contenido_principal .propiedad {
+		width: 96%;
+	}
+	.contenido_principal .propiedad .img_propiedad {
+		width: 30%;
+		margin-right: 20px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.contenido_principal .propiedad .textos {
+		display: inline-block;
+		width: 30%;
+		vertical-align: top;
+		margin-right: 20px;
+	}
+	.contenido_principal .propiedad .textos2 {
+		display: inline-block;
+		width: 63%;
+		vertical-align: top;
+		margin-right: 20px;
+	}
+	.contenido_principal .propiedad .mapa {
+		display: inline-block;
+		vertical-align: top;
+		width: 30%;
+	}
+	.contenido_principal .slide {
+		display: inline-block;
+		vertical-align: top;
+		overflow: hidden;
+		width: 65%;
+		height: 323px;
+	}
+	.contenido_principal .slide #wrapper {
+  		padding: 0;
+  	}
+  	.contenido_principal .slide #wrapper .rslides {
+	    position: relative;
+	    list-style: none;
+	    overflow: hidden;
+	    width: 100%;
+	    padding: 0;
+	    margin: 0;
+	}
+	.contenido_principal .slide #wrapper .rslides .contenido_slide {
+	    position: absolute;
+	    bottom: 30px;
+	    right: 0;
+	    background-color: #bf150f;
+	    color: white;
+	    padding: 10px 30px;
+	}
+	.contenido_principal .slide #wrapper .rslides .contenido_slide h2 {
+	    margin: 0;
+	    font-size: 18px;
+	    font-weight: 400;
+	}
+	.contenido_principal .slide #wrapper .rslides .contenido_slide p {
+	    margin: 0;
+	    font-size: 14px;
+	}
+	.contenido_principal .slide #wrapper .rslides li {
+	    -webkit-backface-visibility: hidden;
+	    position: relative;
+	    display: none;
+	    width: 100%;
+	    left: 0;
+	    top: 0;
+	}
+	.contenido_principal .slide #wrapper .rslides li:first-child {
+	    position: relative;
+	    display: block;
+	    float: left;
+	}
+	.contenido_principal .slide #wrapper .rslides img {
+	    display: block;
+	    height: auto;
+	    float: left;
+	    width: 100%;
+	    border: 0;
+	}
+	.contenido_principal .propiedad .textos2 .input,
+	.contenido_principal .propiedad .textos2 .mensaje {
+		width: 70%;
+	}
+	.contenido_secundario .proyectos_destacados {
+		width: 65%;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.contenido_secundario .proyectos_destacados .conversor .datos { 
+		width: 94%;
+	}
+	.contenido_secundario .proyectos_destacados .conversor .datos .uf {
+		width: 40%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.contenido_secundario .proyectos_destacados .proyectos {
+		width: 94%;
+	}
+	.contenido_secundario .proyectos_destacados .proyectos .destacado {
+		display: inline-block;
+		vertical-align: top;
+		width: 49%;
+	}
+	.contenido_secundario .contacto {
+		display: inline-block;
+		width: 32%;
+		margin-left: 2%;
+		margin-top: 0;
+		vertical-align: top;
+	}
+
+}
+
+@media only screen and (min-width: 926px) { 
+
+	header {
+	    height:100px;
+	    left: 0;
+	    position: static;
+	    right: 0;
+	    z-index: 2;
+	}  
+	header #menu {
+		background-color: #bf150f;
+		border-radius: 5px;
+		margin-top: 33px;
+		padding-bottom: 10px;
+	} 
+	header #menu ul li {
+		padding: 0;
+	    margin: 0;
+	}
+	header #menu ul li a {
+	    color: white;
+	    padding: 0;
+	    margin: 0 10px;
+	    -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+	}
+	header #menu ul li a:hover {
+	    color: #ffed00;
+	    -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+	}
+	header #menu ul li .activo {
+	    color: #ffed00;
+	}
+}
+
+@media only screen and (min-width: 1100px) { 
+	
+	header {
+		width: 1024px;
+	}
+	header #menu ul li a {
+	    color: white;
+	    margin: 0 20px;
+	    padding: 0;
+	}
+	header .logo img {
+		width: 100%;
+	}
+	.contenido_principal {
+		margin-top: 40px;
+		width: 1024px;
+	}
+	.contenido_principal .detalle .contenido_propiedad {  
+		width: 315px;
+	}
+	.contenido_principal .propiedad .mapa { 
+		width: 343px;
+	}
+	.contenido_principal .slide { 
+		width: 66%;
+	}
+	.contenido_secundario {
+		width: 1024px;
+	}
+	.contenido_secundario .contacto { 
+		width: 333px;
+	}
+}

@@ -1,0 +1,216 @@
+<?php
+  include("Conexion.php");
+  $listado = "select * from pie";
+  $sentencia = mysql_query($listado,$conn);
+  while($rs=mysql_fetch_array($sentencia,$mibase)){
+    $correo = str_replace("\r\n","<br>",$rs["correo"]); 
+    $telefono = str_replace("\r\n","<br>",$rs["telefono"]); 
+  }
+  
+?>
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>Venta y Arriendo Busca Tu Propiedad</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="imagenes/icon.png">
+</head>
+<body>
+	<header>
+	  <div class="centro_header">
+	  	<div class="logo">
+	  		<a href="index.php">
+	  			<img src="imagenes/logo.png">
+	  		</a>
+	  	</div>
+	    <nav id="menu">
+	      <a href="#" class="nav-mobile" id="nav-mobile"></a>
+	      <ul>
+	        <li><a href="index.php">INICIO</a></li>
+	        <li><a href="ventayarriendo.php?fun=venta">VENTA</a></li>
+	        <li><a href="ventayarriendo.php?fun=arriendo">ARRIENDO</a></li>
+	        <li><a href="tasaciones.php">TASACIONES</a></li>
+	        <li><a href="noticias.php">NOTICIAS</a></li>
+	        <li><a href="contacto.php">CONTACTO</a></li>
+	      </ul>
+	    </nav>
+	  </div>
+	</header>
+	<section class="contenido_principal">
+		<h4>Venta o Arriendo</h4>
+		<div class="propiedad">
+			<div class="img_propiedad">
+				<img src="imagenes/propiedades/1.jpg">
+			</div>
+			<div class="textos">
+				<h3>Casa Lorem Ipsum</h3>
+				<p>500 m2</p>
+				<p>$98.998.435</p>
+				<p><strong>Descripción:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				<a href="detalle.php">ver mas</a>
+			</div>
+			<div class="mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d850065.9583072681!2d-70.363372!3d-33.668298150000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1414432698081" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+			</div>
+		</div>
+		<div class="propiedad">
+			<div class="img_propiedad">
+				<img src="imagenes/propiedades/2.jpg">
+			</div>
+			<div class="textos">
+				<h3>Casa Lorem Ipsum</h3>
+				<p>500 m2</p>
+				<p>$98.998.433</p>
+				<p><strong>Descripción:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				<a href="detalle.php">ver mas</a>
+			</div>
+			<div class="mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d850065.9583072681!2d-70.363372!3d-33.668298150000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1414432698081" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+			</div>
+		</div>
+		<div class="propiedad">
+			<div class="img_propiedad">
+				<img src="imagenes/propiedades/3.jpg">
+			</div>
+			<div class="textos">
+				<h3>Casa Lorem Ipsum</h3>
+				<p>500 m2</p>
+				<p>$98.998.435</p>
+				<p><strong>Descripción:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				<a href="detalle.php">ver mas</a>
+			</div>
+			<div class="mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d850065.9583072681!2d-70.363372!3d-33.668298150000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1414432698081" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+			</div>
+		</div>
+	</section>
+	<section class="contenido_secundario">
+		<div class="proyectos_destacados">
+			<div class="proyectos">
+				<p class="titulo">Proyectos Destacados</p>
+				<?php 
+			        $listado = "select * from destacados";
+			        $sentencia = mysql_query($listado,$conn);
+			        while($rs=mysql_fetch_array($sentencia,$mibase)){
+			    ?>
+				<article class="destacado">
+					<figure class="img">
+						<img src="imagenes/destacados/<?php echo $rs["id"]; ?>.jpg">
+					</figure>
+					<div class="textos">
+						<h3><?php $texto = str_replace("\r\n","<br>",$rs["nombre_dest"]); echo $texto ?></h3>
+						<p><?php $texto = str_replace("\r\n","<br>",$rs["m2_dest"]); echo $texto ?></p>
+						<p><?php $texto = str_replace("\r\n","<br>",$rs["valor_dest"]); echo $texto ?></p>
+						<a href="<?php echo $rs["url"] ?>">ver mas</a>
+					</div>
+				</article>
+				<?php } ?>
+			</div>
+			<div class="conversor">
+				<div class="datos">
+					<h4 class="conversor_titulo">Conversor Economico</h4>
+					<div class="uf">
+						<P>UF:</P>
+						<input name="uf" type="text" class="conv"/>  
+					</div>
+					<div class="uf">
+						<P>Peso:</P>
+						<p class="valor">100.000</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="contacto">
+			<form class="formulario" action="ventayarriendo.php" method="post" onSubmit="MM_validateForm('name','','R','message','','R');return document.MM_returnValue;return document.MM_returnValue">
+				<h4>Formulario de Contacto</h4>
+		        <input class="input" name="Nombre" type="text" placeholder="Nombre"/>
+		        <input class="input" name="Mail" type="text" placeholder="E-mail"/>  
+		        <input class="input" name="Telefono" type="text" placeholder="Teléfono"/>
+		        <textarea name="Mensaje" id="Mensaje" class="mensaje" placeholder="Mensaje"></textarea>
+		        <input class="enviar" name="Enviar" type="submit" value="Enviar"/>
+		    </form>
+		</section>
+	</section>
+	<footer>
+		<div class="social">
+			<p>Siguenos en nuestras Redes Sociales</p>
+			<a href="https://www.facebook.com/Buscatupropiedad" target="new">
+				<img src="imagenes/facebook.jpg">
+			</a>
+			<a href="https://twitter.com/btpchile" target="new">
+				<img src="imagenes/twitter.jpg">
+			</a>
+			<a href="contacto.php">
+				<img src="imagenes/google.jpg">
+			</a>
+		</div>
+		<p><?php echo $correo ?></p>
+		<p><?php echo $telefono ?></p>
+		<p class="emagenic">todos los derechos reservados a buscatupropiedad.cl | <a href="http://www.emagenic.cl" target="new">sitio web desarrollado por emagenic.cl</a></p>
+	</footer>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script>
+	    $(function() {
+	        var btn_movil = $('#nav-mobile'),
+	            menu = $('#menu').find('ul');
+	        btn_movil.on('click', function (e) {
+	            e.preventDefault();
+	            var el = $(this);
+	            el.toggleClass('nav-active');
+	            menu.toggleClass('open-menu');
+	        })
+	    });
+	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  	<script src="js/responsiveslides.min.js"></script>
+  	<script>
+	    $(function () {
+	      $("#slider1").responsiveSlides({
+	        maxwidth: 800,
+	        speed: 800
+	      });
+
+	    });
+  	</script>
+</body>
+</html>
+<?php
+  if ($_POST["Enviar"]){
+    $destinatario = "atoro@emagenic.cl"; 
+    $nombre = $_POST["Nombre"];
+    $telefono = $_POST["Telefono"];
+    $mail = $_POST["Mail"];
+    $Telefono = $_POST["Telefono"];
+    $Mensaje = $_POST["Mensaje"];
+    $asunto = "Consulta sitio web"; 
+    $cuerpo = "
+    <table width=100% border=0 cellspacing=0 cellpadding=0>
+      <tr><td>NOMBRE: $nombre</td></tr>
+      <tr><td>TELEFONO: $telefono</td></tr>
+      <tr><td>MAIL: $mail</td></tr>
+      <tr><td>CONSULTA: $Mensaje</td></tr>
+    </table>";
+    $headers = "MIME-Version: 1.0\r\n"; 
+    $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+    $headers .= "From: $nombre <$mail>\r\n"; 
+    mail($destinatario,$asunto,$cuerpo,$headers);
+    echo "<script> alert('Su consulta fue enviada correctamente'); </script>";
+    
+    
+  }
+?>
